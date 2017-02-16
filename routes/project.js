@@ -2,6 +2,8 @@ var projects = require('../projects.json');
 
 exports.projectInfo = function(req, res) { 
 	var projectID = req.params.id;
+  console.log("CALLED");
+  console.log(req);
 	if (projectID == "random") {
 		projectID = Math.floor(Math.random() * projects.length) + 1;
 	} else {
